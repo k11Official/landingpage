@@ -1,0 +1,535 @@
+html,
+body {
+    margin: 0;
+    background: linear-gradient(90deg, #4D1B0E 0%, #5F2516 25%, #5F2516 75%, #4D1B0E 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: SF Pro, sans-serif;
+    background-color: #000000;
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.c-white {
+    color: #fff;
+}
+
+.c-yellow {
+    color: #ffe81a;
+}
+
+.background,
+.background .base {
+    position: relative;
+    display: block;
+}
+
+.background .back {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 0;
+}
+
+.background .front {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.background .deco {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.crown-animation {
+    animation: transformUp 6s infinite;
+}
+
+.crown-animation img {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.crown-animation img:nth-child(2) {
+    position: absolute;
+    animation-name: jackpotFadeIn;
+    opacity: 0;
+}
+
+.dice-1,
+.dice-2,
+.apoya {
+    position: absolute;
+    animation: zoomInOut 3s infinite;
+}
+
+.cg-logo {
+    animation: zoomInOut 3s infinite;
+}
+
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18.46rem;
+    z-index: 100;
+    top: .24rem;
+    left: .24rem;
+}
+
+.header img {
+    position: relative;
+    display: block;
+    width: 2.53rem;
+}
+
+.header-nav {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.header-nav a {
+    position: relative;
+    display: block;
+    width: 1.5rem;
+    line-height: .5rem;
+    border-radius: .5rem;
+    font-size: .21rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-in-btn {
+    background: white;
+    color: #ff0000;
+}
+
+.sign-up-btn {
+    background: linear-gradient(89.62deg, #ff1f1f 25.29%, #ff1360 43.88%, #fe01b2 97.88%);
+    color: white;
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.jackpot-top {
+    width: 9.48rem;
+    padding-top: 0.13rem;
+}
+
+.jackpot-top img {
+    margin: 0 auto;
+}
+
+.jackpot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -.6rem;
+}
+
+.jackpot-main {
+    position: absolute;
+    width: 50%;
+    top: -0.1rem;
+}
+
+.jackpot-sub {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+}
+
+.jackpot-sub-main {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+.jackpot_amount {
+    height: 20%;
+    position: absolute;
+    bottom: 40%;
+}
+
+.jackpot-animation {
+    position: relative;
+}
+
+.jackpot-animation img {
+    display: block;
+    margin: 0 auto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.jackpot-animation img:nth-child(2) {
+    position: absolute;
+    animation-name: jackpotFadeIn;
+    top: 0;
+    opacity: 0;
+}
+
+.logo-text {
+    position: relative;
+    display: flex;
+    gap: 9px;
+    margin: .06rem 0;
+}
+
+.logo-text img {
+    width: .75rem;
+    height: .75rem;
+}
+
+.logo-text h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: .28rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px #000000;
+}
+
+.logo-text h4 {
+    margin: 0;
+    color: #ffe81a;
+    font-size: .25rem;
+    font-weight: 600;
+    text-shadow: 3px 3px 2px #000000;
+}
+
+.btn-download {
+    animation: zoomInOut 5s infinite;
+    margin-bottom: .1rem;
+}
+
+.btn-download img {
+    width: 4rem;
+}
+
+.download {
+    position: relative;
+    display: flex;
+    gap: .145rem;
+    margin-bottom: .2rem;
+}
+
+.download img {
+    width: 1.57rem;
+}
+
+.group-logo img {
+    width: 3.89rem;
+}
+
+@media (max-width: 1024px) {
+    html,
+    body {
+        height: 100%;
+    }
+
+    .web-view {
+        display: none;
+    }
+
+    .background,
+    .background .base,
+    .background .base .h5-view {
+        height: 100%;
+    }
+
+    .background .back {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .background .front {
+        height: auto;
+        top: 2.27rem;
+    }
+
+    .dice-1 {
+        top: 8.3rem;
+        left: 5.76rem;
+        width: 1.8334rem;
+    }
+
+    .dice-2 {
+        top: 6.4rem;
+        left: 5.5rem;
+        width: 2.56rem;
+        rotate: 16deg;
+    }
+
+    .apoya {
+        top: 5.6rem;
+        width: 1.2rem;
+        right: 1.3rem;
+        rotate: -8deg;
+    }
+
+    .header {
+        width: 7.04rem;
+        top: .14rem;
+        left: .26rem;
+    }
+
+    .header-nav a {
+        width: 1.4rem;
+        line-height: .6rem;
+        font-size: .22rem;
+    }
+
+    .main {
+        padding-top: .93rem;
+        padding-bottom: 1.4rem;
+        height: max-content;
+    }
+
+    .cg-logo {
+        width: 1.948rem;
+        margin-right: .5rem;
+    }
+
+    .crown-animation {
+        width: 2.94rem;
+        margin-top: -.2rem;
+        margin-bottom: -.5rem;
+    }
+
+    .jackpot {
+        width: 4.92rem;
+        margin-top: -.4rem;
+    }
+
+    .jackpot-main {
+        width: 62%;
+        top: -.35rem;
+    }
+
+    .jackpot-sub {
+        width: 4.28rem;
+    }
+
+    .btn-download {
+        margin-top: -.2rem;
+    }
+
+    .btn-download img {
+        width: 5.3102rem;
+    }
+
+    .download img {
+        width: 1.96rem;
+    }
+
+    .logo-text img {
+        width: 1rem;
+    }
+
+    .footer {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        padding: .05rem .2rem 0;
+        background-color: #000;
+        z-index: 100;
+        will-change: transform;
+        transform: translateZ(0);
+    }
+
+    .logo-text {
+        margin-bottom: 0;
+    }
+
+    .logo-text img {
+        width: 1.05rem;
+        height: 1.05rem;
+    }
+
+    .logo-text .text {
+        padding-top: .15rem;
+    }
+
+    .logo-text h3 {
+        font-size: .28rem;
+    }
+
+    .logo-text h4 {
+        font-size: .3rem;
+    }
+
+    .download-btn-footer {
+        position: relative;
+        display: block;
+        width: 2.28rem;
+        font-size: .2rem;
+        font-weight: 700;
+        line-height: .62rem;
+        border-radius: .62rem;
+        text-align: center;
+        text-decoration: none;
+        background: linear-gradient(113.62deg, #ffc700 0.29%, #ff4523 97.88%, #ff2700 97.88%);
+        color: white;
+        text-shadow: 0 0 4px #000000;
+    }
+}
+
+@media (min-width: 1025px) {
+    .h5-view {
+        display: none;
+    }
+
+    .background .front {
+        height: 100%;
+    }
+
+    .crown-animation {
+        position: absolute;
+        width: 4.51rem;
+        top: 0.1rem;
+        left: 1.65rem;
+    }
+
+    .crown-animation img:nth-child(2) {
+        top: -0.215rem;
+    }
+
+    .dice-1 {
+        top: 7.8rem;
+        right: 3.74rem;
+        width: 3.64rem;
+    }
+
+    .dice-2 {
+        top: 6.6rem;
+        left: 14.73rem;
+        width: 5.09rem;
+    }
+
+    .apoya {
+        top: 5.14rem;
+        right: 2.7rem;
+        width: 1.9rem;
+    }
+
+    .cg-logo {
+        position: absolute;
+        top: 1.18rem;
+        right: .6735rem;
+        width: 2.49rem;
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes jackpotFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sparklingFadeIn {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes transformUp {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
