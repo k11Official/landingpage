@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/decryptImg.js"></script>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="renderer" content="webkit">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/slick.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script>
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="main">
+				<img alt src="images/top.png">
+				<img alt src="images/game-title.png" class="my-20">
+				<img alt src="images/game.png">
+				<img alt src="images/adv.png" class="mt-10">
+				<div style="display: flex; justify-content: space-between;" class="mt-10">
+					<img alt src="images/down-apple.gif" onclick="downloadApp()" style="flex: 1; width: 50%;">
+					<img alt src="images/down-android.gif" onclick="downloadApp()" style="flex: 1;; width: 50%;">
+				</div>
+				<img alt src="images/promo-title.png" class="my-20">
+				<img alt src="images/promo.png">
+				<img alt src="images/good-title.png" class="mt-10">
+
+				<div class="gameBox">
+					<div class="slider">
+						<div><img alt src="images/1.png"></div>
+						<div><img alt src="images/2.png"></div>
+						<div><img alt src="images/3.png"></div>
+						<div><img alt src="images/4.png"></div>
+						<div><img alt src="images/5.png"></div>
+						<div><img alt src="images/6.png"></div>
+					</div>
+				</div>
+				<img alt src="images/company-title.png" class="my-20">
+				<img alt src="images/company.png">
+				<div class="footer">
+					<img src="images/intro.gif" onclick="downloadApp()" alt="">
+				</div>
+				<img src="images/kf.gif" alt="" class="kf">
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal" id="modal-one">
+			<div class="modal-dialog flexc">
+				<img class="img-activity" alt src="images/activity.png">
+				<img class="img-close" id="btn-close" alt src="images/close.png" style="margin-top: 20px;">
+			</div>
+		</div>
+		<script>
+		let curDownloadUrl = '';
+		let androidDownloadUrl = 'https://goodjili2.vip/R/fvOQlgBWA';
+		let iosDownloadUrl = 'https://goodjili2.vip/R/fvOQlgBWA';
+
+		var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
+		    curDownloadUrl = androidDownloadUrl;
+		    console.log('安卓手机');
+		} else if (u.indexOf('iPhone') > -1) { //苹果手机
+		    curDownloadUrl = iosDownloadUrl;
+		    console.log('苹果手机');
+		} else if (u.indexOf('Windows Phone') > -1) { //winphone手机
+		    curDownloadUrl = androidDownloadUrl;
+		    console.log('不支持winphone手机');
+		} else {
+		    curDownloadUrl = androidDownloadUrl;
+		}
+
+		function downloadApp () {
+		    window.open(curDownloadUrl);
+		}
+
+		$(function () {
+		    $('#btn-close').click(function () {
+		        $('#modal-one').hide();
+		    });
+		    $('.gameBox .slider').slick({
+		        autoplay: true,
+		        arrows: false,
+		        dots: false
+		    });
+		    $('.cover,.popBox .close').click(function () {
+		        $('.cover,.popBox').fadeOut();
+		        return false;
+		    });
+		    $('.jcBtn a').click(function () {
+		        $('.jcBox').show();
+		        $('#container').hide();
+		        return false;
+		    });
+		    $('.closeBtn a').click(function () {
+		        $('.jcBox').hide();
+		        $('#container').show();
+		        return false;
+		    });
+		});
+		</script>
+	</body>
+</html>

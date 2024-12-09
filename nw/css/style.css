@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: none
+}
+
+body {
+	font: 14px/1.6 "Microsoft Yahei";
+	overflow-x: hidden;
+}
+
+.flex {
+	display: flex !important;
+	flex-direction: row !important;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flexc {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flexcw-fill {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: flex-start;
+	align-items: center;
+	width: 750px;
+	flex: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.my-20 {
+	margin: 20px 0;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+#container {
+	/* max-width: 750px;
+	margin: 0 auto;
+	padding: 0 0 2.23rem;
+	background: url(../images/bg.jpg) no-repeat left top;
+	background-size: 100% auto; */
+	background-color: #f0f2ff;
+	padding: 0 20px;
+	padding-top: 32px;
+	padding-bottom: 2rem;
+	box-sizing: border-box;
+	max-width: 414px;
+	margin: 0 auto;
+}
+
+ul li {
+	list-style: none
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.clearfix {
+	*+height: 1%;
+}
+
+* html .clearfix {
+	zoom: 1;
+}
+
+/* IE6 */
+*+html .clearfix {
+	zoom: 1;
+}
+
+/* IE7 */
+.fL {
+	float: left !important;
+}
+
+.fR {
+	float: right !important;
+}
+
+img {
+	vertical-align: top;
+	width: 100%;
+}
+
+.title {
+	margin: 0 auto;
+	width: 4.45rem;
+}
+
+.gameBox {
+	/* margin: 0.26rem auto 0.45rem; */
+	/* padding: 0.4rem 0.43rem 0; */
+	width: 100%;
+	/* height: 5.49rem; */
+	position: relative;
+	box-sizing: border-box;
+	/* background: url(/dsg_frontend/wap/dsgnb30/images/bg03.png) no-repeat; */
+	background-size: 100% 100%;
+	margin-top: 20px;
+}
+
+.gameBox .slick-dots {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: -0.6rem;
+	text-align: center;
+}
+
+.gameBox .slick-dots li {
+	margin: 0 0 0 0.24rem;
+	width: 0.27rem;
+	height: 0.27rem;
+	display: inline-block;
+	border-radius: 50%;
+	background: #686868;
+}
+
+.gameBox .slick-dots li.slick-active {
+	background: #FFD800;
+}
+
+.gameBox .slick-dots li button {
+	display: none;
+}
+
+.footer {
+	left: 0;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	/* max-width: 414px; */
+	/* margin: 0 auto; */
+}
+
+.footer img {
+	margin: 0 auto;
+	max-width: 414px;
+}
+
+.kf {
+	width: 62px;
+	height: 96px;
+	position: fixed;
+	right: 20px;
+	bottom: 90px;
+}
+
+
+.modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	top: 0;
+	display: flex;
+}
+
+.modal-dialog {
+	margin: auto;
+	margin-top: 150px;
+}
+
+.img-activity {
+	width: 270px;
+	height: 336px;
+}
+
+.img-close {
+	width: 40px;
+	height: 40px;
+}
